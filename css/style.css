@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+    background-color: #EEEEEE;
+
+}
+
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+
+    width: 100%;
+    height: 92px;
+
+    background-color: #CF2B2B;
+    color: white;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header__container {
+    margin-left: 16px;
+}
+
+.header__restaurantName {
+    font-family: 'Righteous';
+    font-size: clamp(80%, 16vw, 44px);
+    /* font-size: 44px; */
+}
+
+.header__sub {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: clamp(50%, 6vw, 18px);
+    /* font-size: max(4vw,18px); */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+
+    margin-top: 100px;
+
+    width: 100%;
+    background-color: rgba(255, 0, 0,0.2);
+}
+
+.category {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-bottom: 16px;
+
+    width: 100%;
+    
+    /* overflow: hidden; */
+
+    background-color: rgba(10, 113, 240, 0.577);
+}
+
+.option {
+    min-width: 172px;
+    min-height: 202px;
+    margin-right: 10px;
+    border-radius: 9px;
+
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.category__title {
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 0.018em;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    /* z-index: 1; */
+
+    width: 100%;
+    height: 92px;
+
+    background-color: white;
+    color: white;
+}
+
+.footer__button {
+    background-color: #CBCBCB;
+    width: 85%;
+    height: 65%;
+    border-radius: 15px;
+}
+
+.footer__button-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.018em;
+}
