@@ -5,6 +5,11 @@ body {
     /* overflow: hidden; */
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+    }
+
 body::-webkit-scrollbar{
     display: none;
   }
@@ -25,8 +30,10 @@ body::-webkit-scrollbar{
 }
 
 .content {
+    width: 100%;
     height: fit-content;
     margin-top: 100px;
+    margin-bottom: 100px;
     
     display: flex;
     flex-direction: column;
@@ -34,15 +41,11 @@ body::-webkit-scrollbar{
     
     overflow-y: scroll;
     overflow-x: hidden;
-    width: 100%;
-    background-color: rgba(83, 230, 15, 0.647);
 }
 
 .category {
-    width: 100%;
+    width: auto;
     min-height: 100%;
-    /* margin-left: 16px; */
-    margin-bottom: 16px;
     padding-right: 16px;
     
     display: flex;
@@ -51,10 +54,28 @@ body::-webkit-scrollbar{
     align-items: left;
 
     overflow:auto;
-    /* border-radius: 9px; */
     
-    background-color: rgba(10, 113, 240, 0.577);
 }
+
+.category__option {
+    min-width: 172px;
+    min-width: 172px;
+    height: 202px;
+    /* margin-right: 2.5px; */
+    margin-left: 16px;
+    border-radius: 9px;
+
+    border: solid 6px rgba(255, 255, 255, 0);
+
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+}
+
+.active {
+    border-color: green;
+}
+
+
 
 .footer {
     display: flex;
@@ -92,16 +113,6 @@ body::-webkit-scrollbar{
 
 
 
-.category__option {
-    min-width: 172px;
-    height: 202px;
-    /* margin-right: 2.5px; */
-    margin-left: 16px;
-    border-radius: 9px;
-
-    background-color: #FFFFFF;
-    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
-}
 
 
 
