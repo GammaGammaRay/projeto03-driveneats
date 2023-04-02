@@ -38,64 +38,43 @@
   <div class="content">
     
       <!-- CATEGORY ROW START-->
-      <div id="cat01" class="category">
-        <div id="cat01_opt01" class="category__option" onclick="selected(this)"></div>
-        <div id="cat01_opt02" class="category__option" onclick="selected(this)"></div>
-        <div id="cat01_opt03" class="category__option" onclick="selected(this)"></div>
-        <div id="cat01_opt04" class="category__option" onclick="selected(this)"></div>
-        <div id="cat01_opt05" class="category__option" onclick="selected(this)"></div>
-      </div>
+        <div class="category__title">Prato</div>
+        <div id="cat01" class="category">
+          <!-- option start -->
+          <div id="cat01_opt01" class="category__option" onclick="selected(this)">
+            <img src="img/yakiFrango.jpg" alt="">
+            <div class="option__text__container">
+              <div class="option__title">Frango Yin <br><span class="option__description">Chimkin!</span></div>
+              <div class="option__price">R$ <span class="price">14,90</span></div>
+            </div>
+          </div>
+          <!-- option end -->
+          <div id="cat01_opt02" class="category__option" onclick="selected(this)"></div>
+          <div id="cat01_opt03" class="category__option" onclick="selected(this)"></div>
+          <div id="cat01_opt04" class="category__option" onclick="selected(this)"></div>
+          <div id="cat01_opt05" class="category__option" onclick="selected(this)"></div>
+        </div>
       <!-- CATEGORY ROW END -->
 
       <!-- CATEGORY ROW START-->
-      <div class="category">
-        <div class="category__option"></div>
-        <div class="category__option"></div>
-        <div class="category__option"></div>
-        <div class="category__option"></div>
-        <div class="category__option"></div>
-        <div class="category__option"></div>
-        <div class="category__option"></div>
-      </div>
+        <div class="category__title">Bebida</div>
+        <div id="cat02" class="category">
+          <div id="cat02_opt01" class="category__option" onclick="selected(this)"></div>
+          <div id="cat02_opt02" class="category__option" onclick="selected(this)"></div>
+          <div id="cat02_opt03" class="category__option" onclick="selected(this)"></div>
+          <div id="cat02_opt04" class="category__option" onclick="selected(this)"></div>
+          <div id="cat02_opt05" class="category__option" onclick="selected(this)"></div>
+        </div>
       <!-- CATEGORY ROW END -->
 
       <!-- CATEGORY ROW START-->
-      <div class="category">
-        <div class="category__option"></div>
-        <div class="category__option"></div>
-        <div class="category__option"></div>
-        <div class="category__option"></div>
-        <div class="category__option"></div>
-        <div class="category__option"></div>
-        <div class="category__option"></div>
-      </div>
-      <!-- CATEGORY ROW END -->
-
-      <!-- CATEGORY ROW START-->
-      <div class="category">
-        <div class="category__option"></div>
-        <div class="category__option"></div>
-        <div class="category__option"></div>
-      </div>
-      <!-- CATEGORY ROW END -->
-
-      <!-- CATEGORY ROW START-->
-      <div class="category">
-        <div class="category__option"></div>
-        <div class="category__option"></div>
-        <div class="category__option"></div>
-        <div class="category__option"></div>
-        <div class="category__option"></div>
-      </div>
-      <!-- CATEGORY ROW END -->
-
-      <!-- CATEGORY ROW START-->
-      <div class="category">
-        <div class="category__option"></div>
-        <div class="category__option"></div>
-        <div class="category__option"></div>
-        <div class="category__option"></div>
-        <div class="category__option"></div>
+      <div class="category__title">Sobremesa</div>
+      <div id="cat03" class="category">
+        <div id="cat03_opt01" class="category__option" onclick="selected(this)"></div>
+        <div id="cat03_opt02" class="category__option" onclick="selected(this)"></div>
+        <div id="cat03_opt03" class="category__option" onclick="selected(this)"></div>
+        <div id="cat03_opt04" class="category__option" onclick="selected(this)"></div>
+        <div id="cat03_opt05" class="category__option" onclick="selected(this)"></div>
       </div>
       <!-- CATEGORY ROW END -->
       
@@ -105,7 +84,7 @@
 
 
     <div class="footer">
-      <div class="footer__button">
+      <input id="footerButton" class="footer__button" disabled>
       </div>
     </div>
 
@@ -117,6 +96,7 @@
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 
 </html>
