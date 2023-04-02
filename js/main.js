@@ -87,6 +87,8 @@ const animationDelay = 500;
 
 
 openButton.addEventListener('click', () => {
+  const name = prompt("Qual seu nome?");
+  const address = prompt("E seu endereço?");
   const grandTotal = getTotalPrice();
 
   nameSpan.textContent = name;
@@ -109,6 +111,9 @@ closeButton.addEventListener('click', () => {
 });
 
 function confirmOrder() {
-  const name = prompt("Qual seu nome?");
-  const address = prompt("E seu endereço?");
+  const number = '5511956045126';
+  const message = 'Hello, I would like to confirm my order';
+  
+  const url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+  window.open(url);
 }
