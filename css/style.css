@@ -72,7 +72,6 @@ content::-webkit-scrollbar{
 
 .category__option {
     min-width: 172px;
-    min-width: 172px;
     height: 202px;
     margin-left: 16px;
     border-radius: 9px;
@@ -108,7 +107,7 @@ content::-webkit-scrollbar{
 }
 
 .option__title {
-    font-family: 'Roboto';
+    font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -116,7 +115,7 @@ content::-webkit-scrollbar{
 }
 
 .option__description {
-    font-family: 'Roboto';
+    font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 15px;
@@ -135,7 +134,7 @@ content::-webkit-scrollbar{
 }
 
 .option__price{
-    font-family: 'Roboto';
+    font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -143,7 +142,7 @@ content::-webkit-scrollbar{
 }
 
 .price {
-    font-family: 'Roboto';
+    font-family: Roboto, sans-serif;
 }
 
 .check {
@@ -202,7 +201,7 @@ content::-webkit-scrollbar{
     flex-direction: column;
     justify-content: space-between;
 
-    font-family: 'Roboto';
+    font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
@@ -215,14 +214,14 @@ content::-webkit-scrollbar{
     flex-direction: row;
     justify-content: space-between;
 
-    font-family: 'Roboto';
+    font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
   }
 
   .confirmacao_titulo {
-    font-family: 'Roboto';
+    font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
@@ -236,7 +235,7 @@ content::-webkit-scrollbar{
     border: none;
     margin-top: 10px;
 
-    font-family: 'Roboto';
+    font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -263,7 +262,7 @@ content::-webkit-scrollbar{
     font-size: clamp(80%, 16vw, 44px);
 }
 .header__sub {
-    font-family: 'Roboto';
+    font-family: Roboto, sans-serif;
     font-weight: 400;
     font-size: clamp(50%, 6vw, 18px);
 }
@@ -296,7 +295,7 @@ content::-webkit-scrollbar{
 }
 
 .footer__button-text {
-    font-family: 'Roboto';
+    font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;

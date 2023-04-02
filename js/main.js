@@ -11,21 +11,20 @@ function selected(element) {
     
     if (currentActiveDiv.id !== selectedDiv) {
       currentActiveDiv.classList.remove("active");
-      currentActiveCheck.classList.remove("active-check");
+      currentActiveCheck.classList.remove('active-check');
       document.getElementById(selectedDiv).classList.add("active");
-      check.classList.add("active-check");
-    } 
+      check.classList.add('active-check');
+    }
     
     else {
       currentActiveDiv.classList.remove("active");
-      check.classList.remove("active-check");
-      currentActiveCheck.classList.remove("active-check");
+      check.classList.remove('active-check');
+      currentActiveCheck.classList.remove('active-check');
     }
-  } 
-
+  }
   else {
     document.getElementById(selectedDiv).classList.add("active");
-    check.classList.add("active-check");
+    check.classList.add('active-check');
   }
 }
 
@@ -41,7 +40,6 @@ function buttonEnable() {
         document.getElementById("button-text").innerHTML = "Fechar pedido";
         return true;
     }
-
     else {
         document.querySelector(".footer__button").classList.remove("footer__button__active");
         document.getElementById("button-text").innerHTML = "Selecione os 3 itens <br> para fechar o pedido";
@@ -75,18 +73,8 @@ function getTotalPrice() {
     totalPrice += price;
   });
 
-  // console.log(totalPrice);
   return totalPrice;
 }
-
-// function closeOrder() {
-//   if (buttonEnable) {
-//     alert("fechar!");
-//   }
-//   else {
-//     return;
-//   }
-// }
 
 const openButton = document.getElementById('footerButton');
 const closeButton = document.getElementById('close-button');
@@ -95,12 +83,13 @@ const popup = document.getElementById('popup');
 const nameSpan = document.getElementById('name');
 const addressSpan = document.getElementById('address');
 const grandTotalSpan = document.getElementById('grandTotal');
+const animationDelay = 500;
 
 
 openButton.addEventListener('click', () => {
-  let name = prompt("Qual seu nome?");
-  let address = prompt("E seu endereço?");
-  let grandTotal = getTotalPrice();
+  const name = prompt("Qual seu nome?");
+  const address = prompt("E seu endereço?");
+  const grandTotal = getTotalPrice();
 
   nameSpan.textContent = name;
   addressSpan.textContent = address;
@@ -110,7 +99,7 @@ openButton.addEventListener('click', () => {
   overlay.classList.add('fade-in');
   setTimeout(() => {
     overlay.style.display = 'block';
-  }, 500); // adjust duration to match animation time
+  }, animationDelay); 
 });
 
 closeButton.addEventListener('click', () => {
