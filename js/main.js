@@ -1,32 +1,33 @@
 
-// select single option from each category
+// select single option from each category. Toggle green border and check icon.
 function selected(element) {
-    const selectedDiv = element.getAttribute("id");
-    const parentDiv = element.parentNode;
-    const check = document.getElementById(selectedDiv).querySelector(".check");
-  
-    if (parentDiv.querySelector(".active") !== null) {
-      const currentActiveDiv = parentDiv.querySelector(".active");
+  const selectedDiv = element.getAttribute("id");
+  const parentDiv = element.parentNode;
+  const check = document.getElementById(selectedDiv).querySelector(".check");
 
-      console.log(check);
-
-      if (currentActiveDiv.id !== selectedDiv) {
-        currentActiveDiv.classList.remove("active");
-        document.getElementById(selectedDiv).classList.add("active");
-        check.classList.remove("active-check");
-      } 
-      
-      else {
-        currentActiveDiv.classList.remove("active");
-        check.classList.remove("active-check");
-      }
-    } 
-
-    else {
+  if (parentDiv.querySelector(".active") !== null) {
+    const currentActiveDiv = parentDiv.querySelector(".active");
+    const currentActiveCheck = currentActiveDiv.querySelector(".check");
+    
+    if (currentActiveDiv.id !== selectedDiv) {
+      currentActiveDiv.classList.remove("active");
+      currentActiveCheck.classList.remove("active-check");
       document.getElementById(selectedDiv).classList.add("active");
       check.classList.add("active-check");
+    } 
+    
+    else {
+      currentActiveDiv.classList.remove("active");
+      check.classList.remove("active-check");
+      currentActiveCheck.classList.remove("active-check");
     }
+  } 
+
+  else {
+    document.getElementById(selectedDiv).classList.add("active");
+    check.classList.add("active-check");
   }
+}
 
 // if user selected an option from each category, enable confirm order button
 

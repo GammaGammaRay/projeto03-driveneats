@@ -148,6 +148,7 @@ content::-webkit-scrollbar{
 
 .check {
     color: rgba(255,255,255,0);
+    font-size: 22px;
 }
 
 .active-check {
