@@ -38,10 +38,12 @@ function buttonEnable() {
 
     if(cat01 !== null && cat02 !== null && cat03 !== null) {
         document.querySelector(".footer__button").classList.add("footer__button__active");
+        document.getElementById("button-text").innerHTML = "Fechar pedido"
     }
 
     else {
         document.querySelector(".footer__button").classList.remove("footer__button__active");
+        document.getElementById("button-text").innerHTML = "Selecione os 3 itens <br> para fechar o pedido"
     }
 }
 

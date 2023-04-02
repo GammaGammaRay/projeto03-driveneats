@@ -163,6 +163,7 @@ content::-webkit-scrollbar{
 
 .footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -215,6 +216,8 @@ content::-webkit-scrollbar{
     width: 85%;
     height: 65%;
     border-radius: 15px;
+
+    
 }
 
 .footer__button__active {
@@ -228,5 +231,17 @@ content::-webkit-scrollbar{
     font-size: 20px;
     line-height: 23px;
     text-align: center;
+    text-justify:auto;
     letter-spacing: 0.018em;
+    color: white;
+    min-width: 60%;
+    min-width: 80%;
+}
+
+.footer__button-textActive {
+    color: white;
+}
+
+.footer__button-textInactive {
+    color: white;
 }
