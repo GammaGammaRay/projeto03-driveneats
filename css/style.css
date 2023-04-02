@@ -46,6 +46,7 @@ content::-webkit-scrollbar{
     overflow-y: hidden;
     overflow-x: hidden;
 }
+
 .category__container {
     display: flex;
     flex-direction: column;
@@ -54,7 +55,6 @@ content::-webkit-scrollbar{
 
     /* overflow: hidden; */
 }
-
 
 .category {
     width: auto;
@@ -152,14 +152,12 @@ content::-webkit-scrollbar{
 }
 
 .active-check {
-    color: green;
+    color: #50D074;
 }
 
 .active {
-    border-color: green;
+    border-color: #50D074;
 }
-
-
 
 .footer {
     display: flex;
@@ -179,6 +177,83 @@ content::-webkit-scrollbar{
     color: white;
 }
 
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+  }
+  
+  #popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #50D074;
+    padding: 20px;
+    border-radius: 5px;
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 50%;
+    color: white;
+  }
+
+  .confirmacao_total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+  }
+
+  .confirmacao_titulo {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 100%;
+    text-align: center;
+    vertical-align: top;
+  }
+
+  #close-button {
+    background-color: transparent;
+    border: none;
+    margin-top: 10px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+  }
+
+
+  
+  .fade-out {
+    animation: fadeOut 0.5s ease-out;
+  }
+  
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
 .header__container {
     margin-left: 16px;
 }
@@ -186,14 +261,11 @@ content::-webkit-scrollbar{
 .header__restaurantName {
     font-family: 'Righteous';
     font-size: clamp(80%, 16vw, 44px);
-    /* font-size: 44px; */
 }
-
 .header__sub {
     font-family: 'Roboto';
     font-weight: 400;
     font-size: clamp(50%, 6vw, 18px);
-    /* font-size: max(4vw,18px); */
 }
 
 
@@ -216,12 +288,11 @@ content::-webkit-scrollbar{
     width: 85%;
     height: 65%;
     border-radius: 15px;
-
-    
+    border: none;
 }
 
 .footer__button__active {
-    background-color: green;
+    background-color: #50D074;
 }
 
 .footer__button-text {
