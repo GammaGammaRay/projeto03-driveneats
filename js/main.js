@@ -87,8 +87,6 @@ const animationDelay = 500;
 
 
 openButton.addEventListener('click', () => {
-  const name = prompt("Qual seu nome?");
-  const address = prompt("E seu endereço?");
   const grandTotal = getTotalPrice();
 
   nameSpan.textContent = name;
@@ -109,3 +107,8 @@ closeButton.addEventListener('click', () => {
     overlay.classList.remove('fade-out');
   });
 });
+
+function confirmOrder() {
+  const name = prompt("Qual seu nome?");
+  const address = prompt("E seu endereço?");
+}

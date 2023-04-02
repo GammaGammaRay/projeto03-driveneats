@@ -200,6 +200,7 @@ content::-webkit-scrollbar{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* align-items: center; */
 
     font-family: Roboto, sans-serif;
     font-style: normal;
@@ -218,6 +219,13 @@ content::-webkit-scrollbar{
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
+  }
+
+  #popup-btn-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .confirmacao_titulo {
@@ -242,7 +250,19 @@ content::-webkit-scrollbar{
     color: white;
   }
 
+  #confirmar-pedido-btn {
+    padding: 10px;
+    fill: white;
+    border: none;
+    width: 80%;
+    border-radius: 100px;
 
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: #50D074;
+  }
   
   .fade-out {
     animation: fadeOut 0.5s ease-out;
@@ -279,8 +299,6 @@ content::-webkit-scrollbar{
     margin-left: 16px;
     border: none;
 }
-
-
 
 .footer__button {
     background-color: #CBCBCB;

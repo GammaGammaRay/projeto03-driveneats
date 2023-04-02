@@ -86,16 +86,56 @@
             <div class="option__text__container">
               <div class="option__title">Coca-cola <br><span class="option__description">Sugar & caffeine make me go fast! Weee!</span></div>
               <div class="option__footer">
+                <div class="option__price">R$ &nbsp;<span class="price" data-test="item-price">3,90</span>
+                </div>
+                <div class="check"><ion-icon name="checkmark-circle"></ion-icon></div>
+              </div>
+            </div>
+          </div>
+          <div id="cat02_opt02" class="category__option" onclick="selected(this)" data-test="drink">
+            <img src="img/coca-cola.png" alt="">
+            <div class="option__text__container">
+              <div class="option__title">Coca-cola <br><span class="option__description">Sugar & caffeine make me go fast! Weee!</span></div>
+              <div class="option__footer">
+                <div class="option__price">R$ &nbsp;<span class="price" data-test="item-price">4,99</span>
+                </div>
+                <div class="check"><ion-icon name="checkmark-circle"></ion-icon></div>
+              </div>
+            </div>
+          </div>
+          <div id="cat02_opt03" class="category__option" onclick="selected(this)" data-test="drink">
+            <img src="img/coca-cola.png" alt="">
+            <div class="option__text__container">
+              <div class="option__title">Coca-cola <br><span class="option__description">Sugar & caffeine make me go fast! Weee!</span></div>
+              <div class="option__footer">
                 <div class="option__price">R$ &nbsp;<span class="price" data-test="item-price">4,90</span>
                 </div>
                 <div class="check"><ion-icon name="checkmark-circle"></ion-icon></div>
               </div>
             </div>
           </div>
-          <div id="cat02_opt02" class="category__option" onclick="selected(this)"></div>
-          <div id="cat02_opt03" class="category__option" onclick="selected(this)"></div>
-          <div id="cat02_opt04" class="category__option" onclick="selected(this)"></div>
-          <div id="cat02_opt05" class="category__option" onclick="selected(this)"></div>
+          <div id="cat02_opt04" class="category__option" onclick="selected(this)" data-test="drink">
+            <img src="img/coca-cola.png" alt="">
+            <div class="option__text__container">
+              <div class="option__title">Coca-cola <br><span class="option__description">Sugar & caffeine make me go fast! Weee!</span></div>
+              <div class="option__footer">
+                <div class="option__price">R$ &nbsp;<span class="price" data-test="item-price">5,90</span>
+                </div>
+                <div class="check"><ion-icon name="checkmark-circle"></ion-icon></div>
+              </div>
+            </div>
+          </div>
+          <div id="cat02_opt05" class="category__option" onclick="selected(this)" data-test="drink">
+            <img src="img/coca-cola.png" alt="">
+            <div class="option__text__container">
+              <div class="option__title">Coca-cola <br><span class="option__description">Sugar & caffeine make me go fast! Weee!</span></div>
+              <div class="option__footer">
+                <div class="option__price">R$ &nbsp;<span class="price" data-test="item-price">7,90</span>
+                </div>
+                <div class="check"><ion-icon name="checkmark-circle"></ion-icon></div>
+              </div>
+            </div>
+          </div>
         </div>
       <!-- CATEGORY ROW END --> 
 
@@ -177,7 +217,10 @@
           <p>Nome: <span id="name"></span></p>
           <p>Endereço: <span id="address"></span></p>
         </span>
-        <button id="close-button" data-test="cancel-order-btn">Cancelar</button>
+        <div id="popup-btn-container">
+          <button id="confirmar-pedido-btn" data-test="confirm-order-btn" onclick="confirmOrder()">Tudo certo, pode pedir!</button>
+          <button id="close-button" data-test="cancel-order-btn">Cancelar</button>
+        </div>
       </div>
     </div>
 
@@ -185,7 +228,6 @@
 
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
   <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
