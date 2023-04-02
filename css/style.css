@@ -121,6 +121,17 @@ content::-webkit-scrollbar{
     font-weight: 300;
     font-size: 15px;
     color: #A6A6A6;
+    line-height:1em;
+    
+}
+
+.option__footer{
+    width: 100%;
+    display: flex;
+    /* flex:0 0 100%; */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .option__price{
@@ -129,13 +140,18 @@ content::-webkit-scrollbar{
     font-weight: 400;
     font-size: 16px;
     color: black;
-
-    display: flex;
-    justify-content: space-between;
 }
 
 .price {
     font-family: 'Roboto';
+}
+
+.check {
+    color: rgba(255,255,255,0);
+}
+
+.active-check {
+    color: green;
 }
 
 .active {

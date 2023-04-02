@@ -3,22 +3,28 @@
 function selected(element) {
     const selectedDiv = element.getAttribute("id");
     const parentDiv = element.parentNode;
+    const check = document.getElementById(selectedDiv).querySelector(".check");
   
     if (parentDiv.querySelector(".active") !== null) {
       const currentActiveDiv = parentDiv.querySelector(".active");
 
+      console.log(check);
+
       if (currentActiveDiv.id !== selectedDiv) {
         currentActiveDiv.classList.remove("active");
         document.getElementById(selectedDiv).classList.add("active");
+        check.classList.remove("active-check");
       } 
       
       else {
         currentActiveDiv.classList.remove("active");
+        check.classList.remove("active-check");
       }
     } 
 
     else {
       document.getElementById(selectedDiv).classList.add("active");
+      check.classList.add("active-check");
     }
   }
 
@@ -47,6 +53,23 @@ const footerButton = document.getElementById("footerButton");
 for (let i = 0; i < categoryOptions.length; i++) {
   categoryOptions[i].addEventListener("click", function() {
     buttonEnable();
+    getTotalPrice();
     footerButton.disabled = false;
   });
+}
+
+// return sum of"price" from all elements with class ".active"
+
+function getTotalPrice() {
+  let totalPrice = 0;
+  const activeElements = document.querySelectorAll('.active');
+
+  activeElements.forEach(function (element) {
+    const priceElement = element.querySelector('.price');
+    const price = parseFloat(priceElement.innerHTML.replace(',', '.'));
+    totalPrice += price;
+  });
+
+  // console.log(totalPrice);
+  return totalPrice;
 }
