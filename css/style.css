@@ -278,7 +278,7 @@ content::-webkit-scrollbar{
 }
 
 .header__restaurantName {
-    font-family: 'Righteous';
+    font-family: Righteous, sans-serif;
     font-size: clamp(80%, 16vw, 44px);
 }
 .header__sub {
@@ -289,7 +289,7 @@ content::-webkit-scrollbar{
 
 
 .category__title {
-    font-family: 'Righteous';
+    font-family: Righteous, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 26px;

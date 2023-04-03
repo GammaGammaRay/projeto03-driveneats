@@ -209,13 +209,14 @@
     <div id="overlay" class="fade-out">
       <div id="popup">
         <div class="confirmacao_titulo">Confirme seu pedido</div>
-        <div ></div>
-        <p>This is the content of the popup.</p>
 
         <p class="confirmacao_total"> <span>TOTAL</span> <span> R$ &nbsp;<span id="grandTotal"></span> </span> </p>
-        <span>
+        <p class="confirmacao_total"> <span id="dishName"></span> <span id="dishPrice"> </span> </p>
+        <p class="confirmacao_total"> <span id="drinkName"></span> <span id="drinkPrice"> </span> </p>
+        <p class="confirmacao_total"> <span id="dessertName"></span> <span id="dessertPrice"> </span> </p>
+        <!-- <span>
           <p>Nome: <span id="name"></span></p>
-          <p>Endereço: <span id="address"></span></p>
+          <p>Endereço: <span id="address"></span></p> -->
         </span>
         <div id="popup-btn-container">
           <button id="confirmar-pedido-btn" data-test="confirm-order-btn" onclick="confirmOrder()">Tudo certo, pode pedir!</button>

@@ -29,7 +29,6 @@ function selected(element) {
 }
 
 // if user selected an option from each category, enable confirm order button
-
 function buttonEnable() {
     const cat01 = document.getElementById("cat01").querySelector(".active");
     const cat02 = document.getElementById("cat02").querySelector(".active");
@@ -79,21 +78,34 @@ function getTotalPrice() {
 const openButton = document.getElementById('footerButton');
 const closeButton = document.getElementById('close-button');
 const overlay = document.getElementById('overlay');
-const popup = document.getElementById('popup');
-const nameSpan = document.getElementById('name');
 const addressSpan = document.getElementById('address');
 const grandTotalSpan = document.getElementById('grandTotal');
+const dishNameSpan = document.getElementById('dishName');
+const dishPriceSpan = document.getElementById('dishPrice');
+const drinkNameSpan = document.getElementById('drinkName');
+const drinkPriceSpan = document.getElementById('drinkPrice');
+const dessertNameSpan = document.getElementById('dessertName');
+const dessertPriceSpan = document.getElementById('dessertPrice');
 const animationDelay = 500;
 
 
 openButton.addEventListener('click', () => {
-  const name = prompt("Qual seu nome?");
-  const address = prompt("E seu endereço?");
   const grandTotal = getTotalPrice();
+  const dishName = document.querySelector('#cat01 .category__option.active .option__title').childNodes[0].textContent.trim();
+  const drinkName = document.querySelector('#cat02 .category__option.active .option__title').childNodes[0].textContent.trim();
+  const dessertName = document.querySelector('#cat03 .category__option.active .option__title').childNodes[0].textContent.trim();
+  const dishPrice = document.querySelector('#cat01 .category__option.active .price').textContent.trim();
+  const drinkPrice = document.querySelector('#cat02 .category__option.active .price').textContent.trim();
+  const dessertPrice = document.querySelector('#cat03 .category__option.active .price').textContent.trim();
 
-  nameSpan.textContent = name;
-  addressSpan.textContent = address;
+
   grandTotalSpan.textContent = grandTotal;
+  dishNameSpan.textContent = dishName;
+  dishPriceSpan.textContent = dishPrice;
+  drinkNameSpan.textContent = drinkName;
+  drinkPriceSpan.textContent = drinkPrice;
+  dessertNameSpan.textContent = dessertName;
+  dessertPriceSpan.textContent = dessertPrice;
 
   overlay.classList.remove('fade-out');
   overlay.classList.add('fade-in');
@@ -111,8 +123,22 @@ closeButton.addEventListener('click', () => {
 });
 
 function confirmOrder() {
+  const name = prompt("Qual seu nome?");
+  const address = prompt("E seu endereço?");
+
+  const dish = document.querySelector('#cat01 .category__option.active .option__title').childNodes[0].textContent.trim();
+  const drink = document.getElementById("cat02").querySelector(".category__option.active .option__title").childNodes[0].textContent.trim();
+  const dessert = document.getElementById("cat03").querySelector(".category__option.active .option__title").childNodes[0].textContent.trim();
+  const total = getTotalPrice();
   const number = '5511956045126';
-  const message = 'Hello, I would like to confirm my order';
+  const message = `Olá, gostaria de fazer o pedido:
+- Prato: ${dish}
+- Bebida: ${drink}
+- Sobremesa: ${dessert}
+Total: ${total}
+
+Nome: ${name}
+Endereço: ${address}`;
   
   const url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
   window.open(url);
