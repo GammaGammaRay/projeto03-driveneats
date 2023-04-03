@@ -206,10 +206,10 @@
       </button>
     </div>
 
+    <!-- MODAL CONFIRMATION -->
     <div id="overlay" class="fade-out">
       <div id="popup" data-test="confirm-order-modal">
         <div class="confirmacao_titulo">Confirme seu pedido</div>
-        
 
         <p class="confirmacao_total"> <span>TOTAL</span> <span> R$ &nbsp;<span id="grandTotal"></span> </span> </p>
         <p class="confirmacao_total"> <span id="dishName"></span> <span id="dishPrice"> </span> </p>
@@ -219,6 +219,7 @@
         <div id="popup-btn-container">
           <button id="confirmar-pedido-btn" data-test="confirm-order-btn" onclick="confirmOrder()">Tudo certo, pode pedir!</button>
           <button id="close-button" data-test="cancel-order-btn">Cancelar</button>
+          
         </div>
       </div>
     </div>
