@@ -135,7 +135,7 @@ function confirmOrder() {
 - Prato: ${dish}
 - Bebida: ${drink}
 - Sobremesa: ${dessert}
-Total: ${total}
+Total: R$ ${total}
 
 Nome: ${name}
 Endereço: ${address}`;
